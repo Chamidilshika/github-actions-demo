@@ -1,4 +1,4 @@
-name: React CI/CD
+name: React CI
 
 on:
   push:
@@ -13,13 +13,13 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install Packages
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build React App
-        run: npm run build 
+      - name: Build App
+        run: npm run build
